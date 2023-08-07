@@ -1,0 +1,41 @@
+alias dots='git --git-dir=$HOME/.config/.dotfiles --work-tree=$HOME'
+
+# ls, grep and tree utils and colors
+alias ls='ls --color=auto'
+alias ll='ls -lh'
+alias la='ls -lAh'
+alias grep='grep --color=auto'
+alias tree='tree -C'
+
+# create files and directories, including parents (mkdir -p)
+function mkf () {
+  if [ -z "$1" ]; then
+    echo "usage: mkf [path/to/file...]"
+    return 1
+  fi
+  for arg in "$@"; do
+    local directory=$(dirname "$arg")
+    local filename=$(basename "$arg")
+    mkdir -p "$directory"
+    touch "$directory/$filename"
+  done
+}
+alias mkd='mkdir -p'
+
+# find files and directories
+function ff () {
+  if [ -z "$1" ]; then
+    echo "usage: ff [needle] [haystack]"
+    return 1
+  fi
+  local path_start=${2:-.}
+  find "$path_start" -type f -iname "$1"
+}
+function fd () {
+  if [ -z "$1" ]; then
+    echo "usage: fd [needle] [haystack]"
+    return 1
+  fi
+  local path_start=${2:-.}
+  find "$path_start" -type d -iname "$1"
+}
