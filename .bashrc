@@ -9,7 +9,7 @@ test -r $HOME/.config/shell/common && source $HOME/.config/shell/common
 test -r $HOME/.config/shell/aliases && source $HOME/.config/shell/aliases
 
 # history
-HISTFILE=~/.local/share/shell_history
+HISTFILE=$XDG_DATA_HOME/shell_history
 HISTSIZE=1000
 HISTFILESIZE=1000
 # no duplicates or lines starting with space
