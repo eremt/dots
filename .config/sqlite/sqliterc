@@ -1,0 +1,7 @@
+.mode box
+.null NULL
+.eqp ON
+.timer ON
+
+PRAGMA journal_mode = WAL;
+PRAGMA foreign_keys = ON;

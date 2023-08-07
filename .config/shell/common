@@ -10,6 +10,9 @@ export XDG_STATE_HOME=$HOME/.local/state
 # XDG hacks
 ## readline
 export INPUTRC=$XDG_CONFIG_HOME/readline/inputrc
+## sqlite
+alias sqlite3="sqlite3 -init $XDG_CONFIG_HOME/sqlite/sqliterc"
+export SQLITE_HISTORY=$XDG_DATA_HOME/sqlite_history
 
 # PATH
 # ~/.local/bin
