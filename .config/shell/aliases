@@ -39,3 +39,6 @@ function fd () {
   local path_start=${2:-.}
   find "$path_start" -type d -iname "$1"
 }
+
+alias vi='nvim'
+alias v='vi'
