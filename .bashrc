@@ -23,3 +23,20 @@ if ! shopt -oq posix; then
     source /etc/bash_completion
   fi
 fi
+
+# fzf
+if [ -f /usr/share/bash-completion/completions/fzf ]; then
+  # Debian
+  source /usr/share/bash-completion/completions/fzf
+elif [ -f /usr/share/fzf/completion.bash ]; then
+  # Arch
+  source /usr/share/fzf/completion.bash
+fi
+
+if [ -f /usr/share/doc/fzf/examples/key-bindings.bash ]; then
+  # Debian
+  source /usr/share/doc/fzf/examples/key-bindings.bash
+elif [ -f /usr/share/fzf/key-bindings.bash ]; then
+  # Arch
+  source /usr/share/fzf/key-bindings.bash
+fi
