@@ -1,4 +1,4 @@
--- LSP and competion config
+-- LSP and completion config
 --
 -- Required plugins:
 -- - nvim-lspconfig:     https://github.com/neovim/nvim-lspconfig

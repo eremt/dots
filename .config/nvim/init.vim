@@ -63,4 +63,4 @@ source /usr/share/doc/fzf/examples/fzf.vim
 " source /usr/share/vim/vimfiles/plugin/fzf.vim
 nnoremap <C-p> :Files<CR>
 
-lua require('config/lsp')
+lua require('config')
