@@ -22,3 +22,11 @@ fi
 # npm
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 test -r $XDG_DATA_HOME/npm/bin && PATH="$PATH:$XDG_DATA_HOME/npm/bin"
+
+# rust
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+test -r "$CARGO_HOME"/bin && PATH="$PATH:$CARGO_HOME/bin"
+
+# go
+export GOPATH="$XDG_DATA_HOME"/go
+test -r "$GOPATH"/bin && PATH="$PATH:$GOPATH/bin"
