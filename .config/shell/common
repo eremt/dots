@@ -17,3 +17,7 @@ export SQLITE_HISTORY=$XDG_DATA_HOME/sqlite_history
 # PATH
 # ~/.local/bin
 test -r $HOME/.local/bin && PATH="$PATH:$HOME/.local/bin"
+
+# npm
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+test -r $XDG_DATA_HOME/npm/bin && PATH="$PATH:$XDG_DATA_HOME/npm/bin"
