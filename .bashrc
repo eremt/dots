@@ -5,8 +5,8 @@ fg_faded='\e[38;5;241m\]'
 fg_normal='\e[38;5;245m\]'
 PS1="$fg_faded\u@\h:$fg_normal\w "
 
-test -r $HOME/.config/shell/common && source $HOME/.config/shell/common
-test -r $HOME/.config/shell/aliases && source $HOME/.config/shell/aliases
+test -r "$HOME"/.config/shell/common && source "$HOME"/.config/shell/common
+test -r "$HOME"/.config/shell/aliases && source "$HOME"/.config/shell/aliases
 
 # history
 HISTFILE=$XDG_DATA_HOME/shell_history

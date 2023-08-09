@@ -15,8 +15,9 @@ alias sqlite3="sqlite3 -init $XDG_CONFIG_HOME/sqlite/sqliterc"
 export SQLITE_HISTORY=$XDG_DATA_HOME/sqlite_history
 
 # PATH
-# ~/.local/bin
-test -r $HOME/.local/bin && PATH="$PATH:$HOME/.local/bin"
+if test -r "$HOME"/.local/bin; then
+  PATH="$PATH$(find "$HOME"/.local/bin -type d -printf ':%p')"
+fi
 
 # npm
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
