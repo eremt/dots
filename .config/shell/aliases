@@ -7,6 +7,11 @@ alias la='ls -lAh'
 alias grep='grep --color=auto'
 alias tree='tree -C'
 
+# jumping around
+alias cdc='cd $HOME/.config'
+alias cdb='cd $HOME/.local/bin'
+alias cdd='cd $HOME/Downloads'
+
 # create files and directories, including parents (mkdir -p)
 function mkf () {
   if [ -z "$1" ]; then
@@ -42,3 +47,4 @@ function fd () {
 
 alias vi='nvim'
 alias v='vi'
+alias bat='batcat'

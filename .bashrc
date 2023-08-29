@@ -1,9 +1,12 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-fg_faded='\e[38;5;241m\]'
-fg_normal='\e[38;5;245m\]'
-PS1="$fg_faded\u@\h:$fg_normal\w "
+fg_faded='\e[38;5;244m\]'
+fg_normal='\e[38;5;248m\]'
+fg_reset='\e(B\e[m'
+
+# user@host:~/working/dir
+PS1="$fg_faded\u@\h:$fg_normal\w$fg_reset "
 
 test -r "$HOME"/.config/shell/common && source "$HOME"/.config/shell/common
 test -r "$HOME"/.config/shell/aliases && source "$HOME"/.config/shell/aliases
