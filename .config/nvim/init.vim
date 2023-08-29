@@ -1,4 +1,5 @@
 colorscheme vinimal
+set termguicolors
 
 set tabstop=2
 set shiftwidth=2
@@ -6,9 +7,16 @@ set expandtab
 
 set noswapfile
 
+" default of 1000 is painful
+set timeoutlen=750
+
 let mapleader=' '
 
-nnoremap ; :
+" swap ; and :
+noremap ; :
+noremap : ;
+" exit terminal mode
+tnoremap \<Esc> <C-\><C-n>
 nnoremap Q @@
 
 " completions
@@ -38,7 +46,7 @@ vnoremap <leader>/ y:%s/<C-r>"/<C-r>"
 
 " compile
 " with Makefile
-nnoremap <leader>m :!make<CR>
+nnoremap <leader>m :make<CR>
 " without Makefile [file].c => [file]
 nnoremap <leader>M :!gcc -g -o %:r %<CR>
 
